@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div style={{ height: '300px', position: 'relative' }}>
-        <Layout style={{ background: 'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover' }}>
+        <Layout style={{ background: 'url(https://images.pexels.com/photos/264537/pexels-photo-264537.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) center / cover' }}>
           <Header transparent title="Unidos Supermarket" style={{ color: 'white' }}>
             <Navigation>
               <a href="/">Home</a>
