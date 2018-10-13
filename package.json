@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/alewdy/Online-Catering-Order-App/issues"
   },
-  "homepage": "https://github.com/alewdy/Online-Catering-Order-App#readme"
+  "homepage": "https://github.com/alewdy/Online-Catering-Order-App#readme",
+  "dependencies": {
+    "react-bootstrap": "^0.32.4",
+    "react-router-dom": "^4.3.1"
+  }
 }
