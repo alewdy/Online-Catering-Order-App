@@ -4,7 +4,13 @@ import { Jumbotron, Grid, Row, Col, FormGroup, FormControl, Button } from 'react
 import { Card, CardBody } from 'reactstrap';
 import './home.css';
 
+
+
 export default class Home extends Component {
+    constructor() {
+        super()
+    }
+    
     render() {
         return (
             <Grid>
