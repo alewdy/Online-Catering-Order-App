@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Logo from '../logo/logo'
+import './customNav.css'
 
 export default class CustomNav extends Component {
     render() {
         return(
-          <Navbar default collapseOnSelect>
+          <Navbar style={{height: '100px', backgroundColor: 'transparent'}} default collapseOnSelect>
             <Navbar.Header>
-                <Navbar.Brand>
-                    <Link to="/">Unidos Supermarket</Link>
-                </Navbar.Brand>
+                    <Link to="/"><Logo /></Link>
                 <Navbar.Toggle />
             </Navbar.Header>
             <Navbar.Collapse>
