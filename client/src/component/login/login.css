@@ -1,0 +1,14 @@
+.form-horizontal{
+    margin-top: 25%;
+    border: 1px;
+    border-color: gray;
+    border-style: solid;
+    border-radius: 7%;    
+}
+
+.form-group{
+    margin-top: 25px;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 15px;
+}

@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import Logo from '../logo/logo'
 import './customNav.css'
-=======
 import axios from 'axios'
->>>>>>> f31f4767b2b692d192cebf3b3964303697eecdd3
 
 export default class CustomNav extends Component {
 constructor() {
@@ -31,32 +28,17 @@ logout(event) {
 }
     
     render() {
-<<<<<<< HEAD
-        return(
-          <Navbar style={{height: '100px', backgroundColor: 'transparent'}} default collapseOnSelect>
-            <Navbar.Header>
-                    <Link to="/"><Logo /></Link>
-                <Navbar.Toggle />
-            </Navbar.Header>
-            <Navbar.Collapse>
-                <Nav pullRight>
-                    <NavItem eventKey={1} componentClass={Link} href="/" to="/">
-                        Home
-=======
         const loggedIn = this.props.loggedIn;
         console.log('navbar render, props: ')
         console.log(this.props);
 
         return (
-            <Navbar default collapseOnSelect>
+            <Navbar style={{height: '65px'}} default collapseOnSelect>
                         {loggedIn ? (
                             <section className="navbar-section">
             
 
                              <Navbar.Header>
-                             <Navbar.Brand>
-                                 <Link to="/">Unidos Supermarket</Link>
-                             </Navbar.Brand>
                              <Navbar.Toggle />
                          </Navbar.Header>
                          <Navbar.Collapse>
@@ -64,9 +46,7 @@ logout(event) {
                                  <NavItem eventKey={1} componentClass={Link} href="/" to="/">
                                      Home
                              </NavItem>
-                                 <NavItem eventKey={2} componentClass={Link} href="/catering" to="/catering">
-                                     Catering
-                             </NavItem>
+                             
                                  <NavItem eventKey={3} componentClass={Link} href="/checkout" to="/checkout">
                                      Checkout
                              </NavItem>
@@ -78,20 +58,14 @@ logout(event) {
                         ):(
             <section>
                 <Navbar.Header>
-                    <Navbar.Brand>
-                        <Link to="/">Unidos Supermarket</Link>
-                    </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav pullRight>
                         <NavItem eventKey={1} componentClass={Link} href="/" to="/">
                             Home
->>>>>>> f31f4767b2b692d192cebf3b3964303697eecdd3
                     </NavItem>
-                        <NavItem eventKey={2} componentClass={Link} href="/catering" to="/catering">
-                            Catering
-                    </NavItem>
+                        
                         <NavItem eventKey={3} componentClass={Link} href="/checkout" to="/checkout">
                             Checkout
                     </NavItem>

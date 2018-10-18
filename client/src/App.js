@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Home from './component/home/home';
 import Catering from './component/catering/catering';
+import DeltonaCatering from './component/catering/deltona-cater';
+import PoincianaCatering from './component/catering/poinciana-cater';
 import Checkout from './component/checkout/checkout';
 import Navbar from './component/customNav/customNav';
-import LoginForm from './component/login-form';
+import LoginForm from './component/login/login-form';
 import Signup from './component/sign-up';
+import Logo from './component/logo/logo'
 
 class App extends Component {
 
@@ -56,29 +59,23 @@ class App extends Component {
     return (
       <Router>
         <div>
+          <Link to="/"><Logo /></Link>
           <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
           {/* greet user if logged in: */}
           {this.state.loggedIn &&
-            <h2>Join the party, {this.state.username}!</h2>
-          } 
-            <Route exact path="/" component={Home} />
-          <Route path="/catering" component={Catering} />
+            <h2 className="welcome">Welcome, {this.state.username}!</h2>
+          }
+          <Route exact path="/" component={Home} />
+          <Route path="/kissimmee" component={Catering} />
+          <Route path="/deltona" component={DeltonaCatering} />
+          <Route path="/poinciana" component={PoincianaCatering} />
           <Route path="/checkout" component={Checkout} />
-          <Route
-            exact path="/"
-            component={Home} />
-          <Route
-            path="/login"
-            render={() =>
-              <LoginForm
-                updateUser={this.updateUser}
-              />}
-          />
-          <Route
-            path="/signup"
-            render={() =>
-              <Signup />}
-          />
+          <Route path="/login" render={() =>
+            <LoginForm updateUser={this.updateUser} />
+          } />
+          <Route path="/signup" render={() =>
+            <Signup />
+          } />
         </div>
       </Router>
     );
